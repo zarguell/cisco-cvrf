@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-asa-dos-tL4uA4AA</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:Version>1.3</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -34,9 +34,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-08-08T15:59:07</cvrf:Date>
         <cvrf:Description>Corrected CVSS score.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2022-08-10T19:07:55</cvrf:Date>
+        <cvrf:Description>Corrected the fixed version information for Cisco FTD Software.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-04-27T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-08-08T15:59:07</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-08-10T19:07:55</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -101,7 +106,7 @@ FTD Software
         Cisco FTD Software Release  First Fixed Release for This Vulnerability  First Fixed Release for All Vulnerabilities Described in the Bundle of Advisories          6.2.2 and earlier1  Not vulnerable.  Migrate to a fixed release.      6.2.3  Not vulnerable.  Migrate to a fixed release.      6.3.01  Migrate to a fixed release.  Migrate to a fixed release.      6.4.0  6.4.0.13  6.4.0.15 (May 2022)      6.5.01  Migrate to a fixed release.  Migrate to a fixed release.      6.6.0  6.6.5.2  6.6.5.2      6.7.0  Cisco_FTD_Hotfix_AA-6.7.0.4-2.sh.REL.tar
 Cisco_FTD_SSP_FP1K_Hotfix_AA-6.7.0.4-2.sh.REL.tar
 Cisco_FTD_SSP_FP2K_Hotfix_AA-6.7.0.4-2.sh.REL.tar
-Cisco_FTD_SSP_Hotfix_AA-6.7.0.4-2.sh.REL.tar  Migrate to a fixed release.      7.0.0  7.0.2 (May 2022)  7.0.2 (May 2022)      7.1.0  7.1.0.1  7.1.0.1
+Cisco_FTD_SSP_Hotfix_AA-6.7.0.4-2.sh.REL.tar  Migrate to a fixed release.      7.0.0  7.0.2 (May 2022)  7.0.2 (May 2022)      7.1.0  7.1.0  7.1.0.1
 1. Cisco FMC and FTD Software releases 6.2.2 and earlier, as well as releases 6.3.0 and 6.5.0, have reached end of software maintenance ["https://www.cisco.com/c/en/us/products/eos-eol-listing.html"]. Customers are advised to migrate to a supported release that includes the fix for this vulnerability.
 
 For instructions on upgrading your FTD device, see Cisco Firepower Management Center Upgrade Guide ["https://www.cisco.com/c/en/us/td/docs/security/firepower/upgrade/fpmc-upgrade-guide/getting_started.html"].
