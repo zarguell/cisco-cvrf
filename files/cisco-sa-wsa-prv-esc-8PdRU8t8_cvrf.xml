@@ -17,16 +17,21 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-wsa-prv-esc-8PdRU8t8</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:Version>1.1</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
         <cvrf:Date>2022-08-17T15:47:05</cvrf:Date>
         <cvrf:Description>Initial public release.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2022-08-25T18:17:30</cvrf:Date>
+        <cvrf:Description>Updated fixed releases.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-08-17T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-08-17T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-08-25T18:17:30</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -70,7 +75,7 @@ Customers who purchase directly from Cisco but do not hold a Cisco service contr
 Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
       Fixed Releases
 In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by the vulnerability that is described in this advisory and the first release that includes the fix for this vulnerability. Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
-        Cisco AsyncOS for Secure Web Appliance Release  First Fixed Release            Earlier than 12.5  Not vulnerable      12.5  Release no. TBD (Sep 2022)      14.0  Release no. TBD (Aug 2022)       14.5  14.5.0-537
+        Cisco AsyncOS for Secure Web Appliance Release  First Fixed Release            Earlier than 12.5  Not vulnerable      12.5  Release no. TBD (Sep 2022)      14.0  Release no. TBD (Sep 2022)       14.5  14.5.0-537
 In most cases, the software can be upgraded over the network by using the System Upgrade options in the web interface of the Secure Web Appliance. To upgrade a device by using the web interface, do the following:
 
 Choose System Administration &gt; System Upgrade.
