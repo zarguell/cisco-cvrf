@@ -17,22 +17,27 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-vmanage-msg-serv-AqTup7vs</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:Version>1.1</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
         <cvrf:Date>2022-09-07T15:47:11</cvrf:Date>
         <cvrf:Description>Initial public release.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2022-09-09T20:05:37</cvrf:Date>
+        <cvrf:Description>Added cloud information.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-09-07T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-09-07T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-09-09T20:05:37</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
   </cvrf:DocumentTracking>
   <cvrf:DocumentNotes>
-    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the binding configuration of Cisco SD-WAN vManage Software containers could  allow an unauthenticated, adjacent attacker who has access to the VPN0 logical network to also access the messaging service ports on an affected system.
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the binding configuration of Cisco SD-WAN vManage Software containers could allow an unauthenticated, adjacent attacker who has access to the VPN0 logical network to also access the messaging service ports on an affected system.
 
 This vulnerability exists because the messaging server container ports on an affected system lack sufficient protection mechanisms. An attacker could exploit this vulnerability by connecting to the messaging service ports of the affected system. To exploit this vulnerability, the attacker must be able to send network traffic to interfaces within the VPN0 logical network. This network may be restricted to protect logical or physical adjacent networks, depending on device deployment configuration. A successful exploit could allow the attacker to view and inject messages into the messaging service, which can cause configuration changes or cause the system to reload.
 
@@ -58,6 +63,7 @@ Administrators can use access control lists (ACLs) to block ports 4222, 6222, an
 
 Configure ACLs on Cisco IOS devices. For information about preventing exploitation of Cisco IOS devices, see Protecting Your Core: Infrastructure Protection Access Control Lists ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"].
 Configure ACLs at the firewall that protects Cisco SD-WAN vManage Software. For information about Cisco Adaptive Security Appliance (ASA) and Cisco Firepower Threat Defense (FTD) ACL configuration, see Cisco ASA Series Firewall CLI Configuration Guide: Access Control Lists ["https://www.cisco.com/c/en/us/td/docs/security/asa/asa916/configuration/firewall/asa-916-firewall-config/access-acls.html"].
+Cisco Cloud Controllers ACLs (Inbound Rules allowed list) are managed through the Self-Service Portal. Customers will have to review their ACL configurations on the Self-Service Portal to ensure that they are correct. This does not involve updating the controller version. By default, Cisco-hosted devices are protected against the issue described in the advisory unless the customer has explicitly allowed access. For more information, see Cisco SD-WAN Cloud Hosted Controllers Provisioning ["https://www.cisco.com/c/en/us/td/docs/routers/sdwan/knowledge-base/CloudOps/b-cisco-sdwan-cloudops/m-provisioning.html#concept_ocl_kgh_nlb"].
 
 While these workarounds have been deployed and were proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</cvrf:Note>
     <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco has released free software updates that address the vulnerability described in this advisory. Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license:
@@ -75,6 +81,8 @@ Customers should have the product serial number available and be prepared to pro
       Fixed Releases
 Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in the following table(s):
         Cisco SD-WAN vManage Software Release  First Fixed Release           Earlier than 20.3  Migrate to a fixed release.      20.3  Migrate to a fixed release.      20.6  20.6.4      20.7  Migrate to a fixed release.      20.8  Migrate to a fixed release.      20.9  20.9.1
+Note: It is the customer’s responsibility to upgrade their cloud controllers to the latest version in which this vulnerability is fixed.
+
 The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
     <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="6">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
     <cvrf:Note Title="Source" Type="General" Ordinal="7">Cisco would like to thank Orange Business for reporting this vulnerability.</cvrf:Note>
@@ -122,6 +130,7 @@ Administrators can use access control lists (ACLs) to block ports 4222, 6222, an
 
 Configure ACLs on Cisco IOS devices. For information about preventing exploitation of Cisco IOS devices, see Protecting Your Core: Infrastructure Protection Access Control Lists ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"].
 Configure ACLs at the firewall that protects Cisco SD-WAN vManage Software. For information about Cisco Adaptive Security Appliance (ASA) and Cisco Firepower Threat Defense (FTD) ACL configuration, see Cisco ASA Series Firewall CLI Configuration Guide: Access Control Lists ["https://www.cisco.com/c/en/us/td/docs/security/asa/asa916/configuration/firewall/asa-916-firewall-config/access-acls.html"].
+Cisco Cloud Controllers ACLs (Inbound Rules allowed list) are managed through the Self-Service Portal. Customers will have to review their ACL configurations on the Self-Service Portal to ensure that they are correct. This does not involve updating the controller version. By default, Cisco-hosted devices are protected against the issue described in the advisory unless the customer has explicitly allowed access. For more information, see Cisco SD-WAN Cloud Hosted Controllers Provisioning ["https://www.cisco.com/c/en/us/td/docs/routers/sdwan/knowledge-base/CloudOps/b-cisco-sdwan-cloudops/m-provisioning.html#concept_ocl_kgh_nlb"].
 
 While these workarounds have been deployed and were proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</Description>
       </Remediation>
