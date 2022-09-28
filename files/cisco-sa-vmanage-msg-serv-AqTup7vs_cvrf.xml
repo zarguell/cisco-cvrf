@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-vmanage-msg-serv-AqTup7vs</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:Version>1.2</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -29,9 +29,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-09-09T20:05:37</cvrf:Date>
         <cvrf:Description>Added cloud information.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2022-09-27T21:40:31</cvrf:Date>
+        <cvrf:Description>Added clarification for workaround.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-09-07T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-09-09T20:05:37</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-09-27T21:40:31</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -59,7 +64,7 @@ SD-WAN vEdge Routers
 SD-WAN vSmart Controller Software</cvrf:Note>
     <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There is a workaround that addresses this vulnerability.
 
-Administrators can use access control lists (ACLs) to block ports 4222, 6222, and 8222, which are used by Cisco SD-WAN vManage Software messaging services. They may be configured in the following ways depending on deployment:
+Administrators can use access control lists (ACLs) to block TCP ports 4222, 6222, and 8222, which are used by Cisco SD-WAN vManage Software messaging services. They may be configured in the following ways depending on deployment:
 
 Configure ACLs on Cisco IOS devices. For information about preventing exploitation of Cisco IOS devices, see Protecting Your Core: Infrastructure Protection Access Control Lists ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"].
 Configure ACLs at the firewall that protects Cisco SD-WAN vManage Software. For information about Cisco Adaptive Security Appliance (ASA) and Cisco Firepower Threat Defense (FTD) ACL configuration, see Cisco ASA Series Firewall CLI Configuration Guide: Access Control Lists ["https://www.cisco.com/c/en/us/td/docs/security/asa/asa916/configuration/firewall/asa-916-firewall-config/access-acls.html"].
@@ -126,7 +131,7 @@ A standalone copy or paraphrase of the text of this document that omits the dist
       <Remediation Type="Workaround">
         <Description>There is a workaround that addresses this vulnerability.
 
-Administrators can use access control lists (ACLs) to block ports 4222, 6222, and 8222, which are used by Cisco SD-WAN vManage Software messaging services. They may be configured in the following ways depending on deployment:
+Administrators can use access control lists (ACLs) to block TCP ports 4222, 6222, and 8222, which are used by Cisco SD-WAN vManage Software messaging services. They may be configured in the following ways depending on deployment:
 
 Configure ACLs on Cisco IOS devices. For information about preventing exploitation of Cisco IOS devices, see Protecting Your Core: Infrastructure Protection Access Control Lists ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"].
 Configure ACLs at the firewall that protects Cisco SD-WAN vManage Software. For information about Cisco Adaptive Security Appliance (ASA) and Cisco Firepower Threat Defense (FTD) ACL configuration, see Cisco ASA Series Firewall CLI Configuration Guide: Access Control Lists ["https://www.cisco.com/c/en/us/td/docs/security/asa/asa916/configuration/firewall/asa-916-firewall-config/access-acls.html"].
