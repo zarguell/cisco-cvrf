@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-openssl-W9sdCc2a</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Interim</cvrf:Status>
-    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:Version>1.2</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -29,9 +29,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-11-01T20:23:02</cvrf:Date>
         <cvrf:Description>Update with OpenSSL public announcement.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2022-11-02T19:26:36</cvrf:Date>
+        <cvrf:Description>Update products under investigation and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-10-28T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-01T20:23:02</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-02T19:26:36</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -56,24 +61,24 @@ The following products are under active investigation to determine whether they 
 Cable Devices
 
 Ultra Cloud Core - Network Repository Function
-Ultra Cloud Core - User Plane Function
 
 Network Management and Provisioning
 
-Container Platform
 Evolved Programmable Network Manager
 IoT Field Network Director, formerly known as Connected Grid Network Management System
 
-Routing and Switching – Enterprise and Service Provider
+Routing and Switching - Enterprise and Service Provider
 
 SD-WAN vAnalytics Software
-SD-WAN vManage Software
-Ultra Cloud Core - Policy Control Function
-Ultra Cloud Core - Serving Gateway Function</cvrf:Note>
+SD-WAN vManage Software</cvrf:Note>
     <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">Currently, no on-premise products are known to be affected. As the investigation progresses, Cisco will update this advisory with information about affected products and services.</cvrf:Note>
     <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Only products that may contain the affected software are listed in this advisory. If a product or cloud offer is not explicitly listed in this advisory, it is not vulnerable.
 
 Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+Cable Devices
+
+Ultra Cloud Core - User Plane Function
 
 Network and Content Security Devices
 
@@ -82,6 +87,7 @@ Secure Network Analytics
 Network Management and Provisioning
 
 Application Policy Infrastructure Controller (APIC)
+Cisco Container Platform
 Data Center Network Manager (DCNM)
 Elastic Services Controller (ESC)
 Nexus Dashboard, formerly known as Application Services Engine
@@ -89,6 +95,7 @@ Prime Infrastructure
 
 Routing and Switching - Enterprise and Service Provider
 
+Ultra Cloud Core - Policy Control Function
 Ultra Cloud Core - Redundancy Configuration Manager
 Ultra Cloud Core - Subscriber Microservices Infrastructure
 
@@ -100,7 +107,7 @@ HyperFlex System
 
 Cisco is investigating its cloud offers to determine which products may be affected by these vulnerabilities. The following table lists Cisco cloud offers that are under investigation. Only cloud offers known to possibly be affected are listed. If a cloud offer is not explicitly listed in this advisory, it is not vulnerable.
 
-                                Product              Disposition                                  AppDynamics              Not affected                                  CX Cloud              Under investigation                                  Duo              Under investigation                                  Intersight              Under investigation                                  Meraki              Not affected                                  SD-WAN              Under investigation                                  SecureX              Under investigation                                  ThousandEyes              Under investigation                                  Umbrella              Under investigation                                  Webex Calling              Under investigation                                  Webex Contact Center              Under investigation                                  Webex Teams              Not affected</cvrf:Note>
+        Product  Disposition      AppDynamics  Not affected      CX Cloud  Not affected      Duo  Not affected      Intersight  Not affected      Meraki  Not affected      SD-WAN  Not affected      SecureX  Not affected      ThousandEyes  Not affected      UC Management  Under investigation      Umbrella  Not affected      Webex Calling  Under investigation      Webex Cloud-Connected UC  Under Investigation      Webex Contact Center  Under investigation      Webex Teams  Not affected</cvrf:Note>
     <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">Any workarounds for a specific Cisco product or service will be documented in the relevant Cisco bugs, which are identified in the Vulnerable Products ["#vp"] section of this advisory.</cvrf:Note>
     <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">For information about fixed software releases ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], consult the Cisco bugs identified in the Vulnerable Products ["#vp"] section of this advisory.
 
@@ -108,7 +115,7 @@ When considering software upgrades ["https://tools.cisco.com/security/center/res
 
 In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.</cvrf:Note>
     <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
-    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco PSIRT is not aware of malicious use of the vulnerabilities that are described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any malicious use of the vulnerabilities that are described in this advisory.</cvrf:Note>
     <cvrf:Note Title="Source" Type="General" Ordinal="9">These vulnerabilities were publicly disclosed by the OpenSSL Software Foundation on November 1, 2022.</cvrf:Note>
     <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME. CISCO EXPECTS TO UPDATE THIS DOCUMENT AS NEW INFORMATION BECOMES AVAILABLE.
 
