@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-openssl-W9sdCc2a</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Interim</cvrf:Status>
-    <cvrf:Version>1.3</cvrf:Version>
+    <cvrf:Version>1.4</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -39,9 +39,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-11-03T20:12:42</cvrf:Date>
         <cvrf:Description>Update products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.4</cvrf:Number>
+        <cvrf:Date>2022-11-04T18:40:16</cvrf:Date>
+        <cvrf:Description>Update affected products and disposition of cloud offers.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-10-28T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-03T20:12:42</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-04T18:40:16</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -60,7 +65,7 @@ This advisory is available at the following link:
 https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a"]</cvrf:Note>
     <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco is investigating its product line to determine which products and cloud services may be affected by these vulnerabilities. OpenSSL 3.x is not widely used in Cisco products and cloud offers, and only products that may contain the affected software are listed in this advisory. If a product or cloud offer is not explicitly listed in this advisory, it is not vulnerable.</cvrf:Note>
     <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">The following table lists Cisco products that are affected by one or more of the vulnerabilities that are described in this advisory. If a future release date is indicated for software, the date provided represents an estimate based on all information known to Cisco as of the Last Updated date at the top of the advisory. Availability dates are subject to change based on a number of factors, including satisfactory testing results and delivery of other priority features and fixes. If no version or date is listed for an affected component (indicated by a blank field and/or an advisory designation of Interim), Cisco is continuing to evaluate the fix and will update the advisory as additional information becomes available. After the advisory is marked Final, customers should refer to the associated Cisco bug(s) for further details.
-        Product  Cisco Bug ID  Fixed Release Availability ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"]      Network Application, Service, and Acceleration      HyperFlex HTML Plugin for VMware vCenter  CSCwd44113 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44113"]         Network Management and Provisioning      IoT Field Network Director, formerly known as Connected Grid Network Management System  CSCwd44112 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44112"]</cvrf:Note>
+        Product  Cisco Bug ID  Fixed Release Availability ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"]      Network Management and Provisioning      IoT Field Network Director, formerly known as Connected Grid Network Management System  CSCwd44112 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44112"]  5.0.0 (May 2023)</cvrf:Note>
     <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Only products that may contain the affected software are listed in this advisory. If a product or cloud offer is not explicitly listed in this advisory, it is not vulnerable.
 
 Cisco has confirmed that this vulnerability does not affect the following Cisco products:
@@ -103,7 +108,7 @@ UCS Manager
 
 Cisco is investigating its cloud offers to determine which products may be affected by these vulnerabilities. The following table lists Cisco cloud offers that are under investigation. Only cloud offers known to possibly be affected are listed. If a cloud offer is not explicitly listed in this advisory, it is not vulnerable.
 
-        Product  Disposition      AppDynamics  Not affected      CX Cloud  Not affected      Duo  Not affected      Intersight  Not affected      Meraki  Not affected      SD-WAN  Not affected      SecureX  Not affected      ThousandEyes  Not affected      UC Management  Under investigation      Umbrella  Not affected      Webex Calling  Under investigation      Webex Cloud-Connected UC  Under Investigation      Webex Contact Center  Under investigation      Webex Teams  Not affected</cvrf:Note>
+        Product  Disposition      AppDynamics  Not affected      CX Cloud  Not affected      Duo  Not affected      Intersight  Not affected      Meraki  Not affected      SD-WAN  Not affected      SecureX  Not affected      ThousandEyes  Not affected      Umbrella  Not affected      Unified Communications Manager Cloud  Under investigation      Webex Calling  Under investigation      Webex Cloud-Connected UC  Under Investigation      Webex Contact Center  Under investigation      Webex Teams  Not affected</cvrf:Note>
     <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">Any workarounds for a specific Cisco product or service will be documented in the relevant Cisco bugs, which are identified in the Vulnerable Products ["#vp"] section of this advisory.</cvrf:Note>
     <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">For information about fixed software releases ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], consult the Cisco bugs identified in the Vulnerable Products ["#vp"] section of this advisory.
 
