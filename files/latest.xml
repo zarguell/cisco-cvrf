@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-ise-access-contol-EeufSUCx</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Interim</cvrf:Status>
-    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:Version>1.2</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -29,9 +29,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-11-14T21:08:21</cvrf:Date>
         <cvrf:Description>Updated the name of the researcher.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2022-11-15T20:31:43</cvrf:Date>
+        <cvrf:Description>Updated CSCwc62413 fix information.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-11-02T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-14T21:08:21</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-15T20:31:43</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -72,7 +77,7 @@ In the following table(s), the left column lists Cisco software releases. The ri
 1. Hot patches could be available by request for certain releases and patch levels. Contact Cisco TAC to make the request.
 Note: Cisco ISE releases 3.1P4 and 3.2 reduce the impact of this vulnerability by preventing files from being downloaded. The files can still be listed and deleted. This fix is tracked in CSCwb75965 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb75965"].
 
-Note: Cisco ISE releases 3.1P5 and 3.2P1 further reduce the impact of this vulnerability by limiting the accessible files to the localdisk folder only. For more information about the localdisk folder, see the ISE 3.1 Release Notes ["https://www.cisco.com/c/en/us/td/docs/security/ise/3-1/release_notes/b_ise_31_RN.html#Cisco_Concept.dita_c1b2626d-e362-4597-8170-b93d812abe44"]. This fix is tracked in CSCwc62413 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc62413"].
+Note: Cisco ISE releases 3.1P4 and 3.2P1 further reduce the impact of this vulnerability by limiting the accessible files to the localdisk folder only. For more information about the localdisk folder, see the ISE 3.1 Release Notes ["https://www.cisco.com/c/en/us/td/docs/security/ise/3-1/release_notes/b_ise_31_RN.html#Cisco_Concept.dita_c1b2626d-e362-4597-8170-b93d812abe44"]. This fix is tracked in CSCwc62413 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc62413"].
 
 For instructions on upgrading a device, see the Upgrade Guides located on the Cisco Identity Service Engine ["https://www.cisco.com/c/en/us/support/security/identity-services-engine/series.html"] support page.
 
