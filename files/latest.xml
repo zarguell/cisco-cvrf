@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
-  <cvrf:DocumentTitle>Cisco Identity Services Engine Vulnerabilities</cvrf:DocumentTitle>
+  <cvrf:DocumentTitle>Cisco Identity Services Engine Insufficient Access Control Vulnerability</cvrf:DocumentTitle>
   <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
   <cvrf:DocumentPublisher Type="Vendor">
     <cvrf:ContactDetails>Emergency Support:
@@ -14,104 +14,53 @@ More information can be found in Cisco Security Vulnerability Policy available a
   </cvrf:DocumentPublisher>
   <cvrf:DocumentTracking>
     <cvrf:Identification>
-      <cvrf:ID>cisco-sa-ise-7Q4TNYUx</cvrf:ID>
+      <cvrf:ID>cisco-sa-ise-access-contol-EeufSUCx</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Interim</cvrf:Status>
-    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:Version>1.3</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
-        <cvrf:Date>2022-11-16T16:02:19</cvrf:Date>
+        <cvrf:Date>2022-11-02T15:47:25</cvrf:Date>
         <cvrf:Description>Initial public release.</cvrf:Description>
       </cvrf:Revision>
       <cvrf:Revision>
         <cvrf:Number>1.1</cvrf:Number>
-        <cvrf:Date>2022-11-16T20:35:41</cvrf:Date>
-        <cvrf:Description>Updated footnotes in the fixed release table and updated name of the researcher.</cvrf:Description>
+        <cvrf:Date>2022-11-14T21:08:21</cvrf:Date>
+        <cvrf:Description>Updated the name of the researcher.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2022-11-15T20:31:43</cvrf:Date>
+        <cvrf:Description>Updated CSCwc62413 fix information.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2022-11-17T22:20:06</cvrf:Date>
+        <cvrf:Description>Updated source to include additional researchers. Added the defect CSCwb75965 to the header.</cvrf:Description>
       </cvrf:Revision>
     </cvrf:RevisionHistory>
-    <cvrf:InitialReleaseDate>2022-11-16T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-16T20:35:41</cvrf:CurrentReleaseDate>
+    <cvrf:InitialReleaseDate>2022-11-02T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-17T22:20:06</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
   </cvrf:DocumentTracking>
   <cvrf:DocumentNotes>
-    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Multiple vulnerabilities in Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to inject arbitrary operating system commands, bypass security protections, and conduct cross-site scripting attacks.
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to bypass authorization and access system files.
 
-For more information about these vulnerabilities, see the Details ["#details"] section of this advisory.
+This vulnerability is due to improper access control in the web-based management interface of an affected device. An attacker could exploit this vulnerability by sending a crafted HTTP request to the affected device. A successful exploit could allow the attacker to list, download, and delete certain files that they should not have access to.
 
-Cisco plans to release software updates that address these vulnerabilities. There are no workarounds that address these vulnerabilities.
+Cisco plans to release software updates that address this vulnerability. There are no workarounds that address this vulnerability.
 
 This advisory is available at the following link:
-https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-7Q4TNYUx ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-7Q4TNYUx"]</cvrf:Note>
-    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">These vulnerabilities affect Cisco ISE.
+https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This vulnerability affects Cisco ISE.
 
 For information about which Cisco software releases are vulnerable, see the Fixed Software ["#fs"] section of this advisory.</cvrf:Note>
-    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by these vulnerabilities.</cvrf:Note>
-    <cvrf:Note Title="Details" Type="General" Ordinal="4">The vulnerabilities are not dependent on one another. Exploitation of one of the vulnerabilities is not required to exploit another vulnerability. In addition, a software release that is affected by one of the vulnerabilities may not be affected by the other vulnerabilities.
-
-Note: These vulnerabilities can be exploited only by valid and authorized users of the Cisco ISE system. As a best practice, customers can restrict console access and admin web access. To configure the access restrictions, choose Administration &gt; System &gt; Admin Access &gt; Settings &gt; Access &gt; IP Access.
-
-Details about the vulnerabilities are as follows:
-
-CVE-2022-20964: Cisco Identity Services Engine tcpdump Feature Command Injection Vulnerability
-
-A vulnerability in the web-based management interface of Cisco ISE could allow an authenticated, remote attacker to inject arbitrary commands on the underlying operating system.
-
-This vulnerability is due to improper validation of user input within requests as part of the web-based management interface tcpdump feature. An attacker with privileges sufficient to access the tcpdump feature could exploit this vulnerability by manipulating requests to the web-based management interface to contain operating system commands. A successful exploit could allow the attacker to execute arbitrary operating system commands on the underlying operating system with the privileges of the web services user. The chaining of further issues could allow an attacker with command line access to elevate privileges to root and gain complete control over the system.
-
-Cisco plans to release software updates that address this vulnerability. There are no workarounds that address this vulnerability.
-
-Bug ID(s): CSCwc98823 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc98823"]
-CVE ID: CVE-2022-20964
-Security Impact Rating (SIR): High
-CVSS Base Score: 6.3
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
-
-CVE-2022-20966: Cisco Identity Services Engine tcpdump Stored Cross-Site Scripting Vulnerability
-
-A vulnerability in the web-based management interface of Cisco ISE could allow an authenticated, remote attacker to conduct cross-site scripting attacks against other users of the application web-based management interface.
-
-This vulnerability is due to improper validation of input to an application feature before storage within the web-based management interface tcpdump feature. An attacker could exploit this vulnerability by creating entries that contain malicious HTML or script code within the application interface. A successful exploit could allow the attacker to store malicious HTML or script code within the application interface for use in further cross-site scripting attacks.
-
-Cisco plans to release software updates that address this vulnerability. There are no workarounds that address this vulnerability.
-
-Bug ID(s): CSCwc98831 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc98831"]
-CVE ID: CVE-2022-20966
-Security Impact Rating (SIR): Medium
-CVSS Base Score: 5.4
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-
-CVE-2022-20967: Cisco Identity Services Engine External RADIUS Server Feature Stored Cross-Site Scripting Vulnerability
-
-A vulnerability in the web-based management interface External RADIUS Server feature of Cisco ISE could allow an authenticated, remote attacker to conduct cross-site scripting attacks against other users of the application web-based management interface.
-
-This vulnerability is due to improper validation of input to an application feature before storage within the External RADIUS Server feature of the web-based management interface. An attacker could exploit this vulnerability by creating entries within the application interface that contain malicious HTML or script code. A successful exploit could allow the attacker to store malicious HTML or script code within the application interface for use in further cross-site scripting attacks.
-
-Cisco plans to release software updates that address this vulnerability. There are no workarounds that address this vulnerability.
-
-Bug ID(s): CSCwc98833 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc98833"]
-CVE ID: CVE-2022-20967
-Security Impact Rating (SIR): Medium
-CVSS Base Score: 4.8
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-
-CVE-2022-20965: Cisco Identity Services Engine Access Bypass Vulnerability
-
-A vulnerability in the web-based management interface of Cisco ISE could allow an authenticated, remote attacker to bypass security restrictions within the web-based management interface.
-
-This vulnerability is due to improper access control on a feature within the web-based management interface of the affected system. An attacker could exploit this vulnerability by accessing features through direct requests, thus bypassing checks within the application. A successful exploit could allow the attacker to take privileged actions within the web-based management interface that should be otherwise restricted.
-
-Cisco plans to release software updates that address this vulnerability. There are no workarounds that address this vulnerability.
-
-Bug ID(s): CSCwc98828 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc98833"]
-CVE ID: CVE-2022-20965
-Security Impact Rating (SIR): Medium
-CVSS Base Score: 4.3
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N</cvrf:Note>
-    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address these vulnerabilities.</cvrf:Note>
-    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">Cisco plans to release free software updates ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#ssu"] that address the vulnerabilities described in this advisory. Customers with service contracts that entitle them to regular software updates should obtain security fixes through their usual update channels.
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco will release free software updates ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#ssu"] that address the vulnerability described in this advisory. Customers with service contracts that entitle them to regular software updates should obtain security fixes through their usual update channels.
 
 Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license:
 https://www.cisco.com/c/en/us/products/end-user-license-agreement.html ["https://www.cisco.com/c/en/us/products/end-user-license-agreement.html"]
@@ -128,26 +77,31 @@ Customers who purchase directly from Cisco but do not hold a Cisco service contr
 
 Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
       Fixed Releases
-In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by the vulnerabilities that are described in this advisory and the first release that includes the fix for these vulnerabilities. Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
-        Cisco ISE Release  First Fixed Release          2.72 and earlier  Migrate to a fixed release.      3.02 and earlier  Migrate to a fixed release.      3.11  3.1p6 (Mar 2023)      3.21  3.2p1 (Jan 2023)
-1. Hot patches could be available by request for the following Cisco ISE releases and patch levels: 3.1p5 and 3.2. Contact Cisco TAC to make the request.
-2. Cisco is evaluating fixes for Cisco ISE releases 2.7 and 3.0.
+In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by the vulnerability that is described in this advisory and the first release that includes the fix for this vulnerability. Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
+        Cisco ISE Release  First Fixed Release          3.0 and earlier  Not vulnerable      3.11  Release no. TBD (future release)      3.21  Release no. TBD (future release)
+1. Hot patches could be available by request for certain releases and patch levels. Contact Cisco TAC to make the request.
+Note: Cisco ISE releases 3.1P4 and 3.2 reduce the impact of this vulnerability by preventing files from being downloaded. The files can still be listed and deleted. This fix is tracked in CSCwb75965 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb75965"].
+
+Note: Cisco ISE releases 3.1P4 and 3.2P1 further reduce the impact of this vulnerability by limiting the accessible files to the localdisk folder only. For more information about the localdisk folder, see the ISE 3.1 Release Notes ["https://www.cisco.com/c/en/us/td/docs/security/ise/3-1/release_notes/b_ise_31_RN.html#Cisco_Concept.dita_c1b2626d-e362-4597-8170-b93d812abe44"]. This fix is tracked in CSCwc62413 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc62413"].
+
 For instructions on upgrading a device, see the Upgrade Guides located on the Cisco Identity Service Engine ["https://www.cisco.com/c/en/us/support/security/identity-services-engine/series.html"] support page.
 
 The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
-    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
-    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco PSIRT is aware that proof-of-concept exploit code for the vulnerabilities that are described in this advisory will become available after software fixes are released. Public reports of the vulnerabilities, including a description and classification without specific technical details, may become available after this advisory is published.
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is aware that proof-of-concept exploit code for the vulnerability that is described in this advisory will become available after software fixes are released. Public reports of the vulnerability, including a description and classification without specific technical details, may become available after this advisory is published.
 
-The Cisco PSIRT is not aware of any malicious use of the vulnerabilities that are described in this advisory.</cvrf:Note>
-    <cvrf:Note Title="Source" Type="General" Ordinal="9">Cisco would like to thank Davide Virruso of Yoroi for reporting these vulnerabilities.</cvrf:Note>
-    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME. CISCO EXPECTS TO UPDATE THIS DOCUMENT AS NEW INFORMATION BECOMES AVAILABLE.
+The Cisco PSIRT is not aware of any malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank Davide Virruso of Yoroi for reporting the vulnerability associated with defect CSCwc62419.
+
+Cisco would like to thank Antonio López and Víctor Campos for reporting the vulnerability associated with defect CSCwb75965.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME. CISCO EXPECTS TO UPDATE THIS DOCUMENT AS NEW INFORMATION BECOMES AVAILABLE.
 
 A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
   </cvrf:DocumentNotes>
   <cvrf:DocumentReferences>
     <cvrf:Reference Type="Self">
-      <cvrf:URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-7Q4TNYUx</cvrf:URL>
-      <cvrf:Description>Cisco Identity Services Engine Vulnerabilities</cvrf:Description>
+      <cvrf:URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx</cvrf:URL>
+      <cvrf:Description>Cisco Identity Services Engine Insufficient Access Control Vulnerability</cvrf:Description>
     </cvrf:Reference>
   </cvrf:DocumentReferences>
   <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
@@ -158,13 +112,13 @@ A standalone copy or paraphrase of the text of this document that omits the dist
     </Branch>
   </ProductTree>
   <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
-    <Title>vuln-CVE-2022-20964</Title>
-    <ID SystemName="Cisco Bug ID">CSCwc98823</ID>
+    <Title>Cisco Identity Services Engine Interface Feature Insufficient Access Control Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwb75965</ID>
     <Notes>
-      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwc98823</Note>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwb75965,CSCwc62419</Note>
       <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
     </Notes>
-    <CVE>CVE-2022-20964</CVE>
+    <CVE>CVE-2022-20956</CVE>
     <ProductStatuses>
       <Status Type="Known Affected">
         <ProductID>CVRFPID-111903</ProductID>
@@ -172,112 +126,19 @@ A standalone copy or paraphrase of the text of this document that omits the dist
     </ProductStatuses>
     <CVSSScoreSets>
       <ScoreSetV3>
-        <BaseScoreV3>6.3</BaseScoreV3>
-        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L</VectorV3>
+        <BaseScoreV3>7.1</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N</VectorV3>
       </ScoreSetV3>
     </CVSSScoreSets>
     <Remediations>
       <Remediation Type="Workaround">
-        <Description>There are no workarounds that address these vulnerabilities.</Description>
+        <Description>There are no workarounds that address this vulnerability.</Description>
       </Remediation>
     </Remediations>
     <References>
       <Reference Type="Self">
-        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-7Q4TNYUx</URL>
-        <Description>Cisco Identity Services Engine Vulnerabilities</Description>
-      </Reference>
-    </References>
-  </Vulnerability>
-  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
-    <Title>vuln-CVE-2022-20965</Title>
-    <ID SystemName="Cisco Bug ID">CSCwc98828</ID>
-    <Notes>
-      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwc98828</Note>
-      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
-    </Notes>
-    <CVE>CVE-2022-20965</CVE>
-    <ProductStatuses>
-      <Status Type="Known Affected">
-        <ProductID>CVRFPID-111903</ProductID>
-      </Status>
-    </ProductStatuses>
-    <CVSSScoreSets>
-      <ScoreSetV3>
-        <BaseScoreV3>4.3</BaseScoreV3>
-        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N</VectorV3>
-      </ScoreSetV3>
-    </CVSSScoreSets>
-    <Remediations>
-      <Remediation Type="Workaround">
-        <Description>There are no workarounds that address these vulnerabilities.</Description>
-      </Remediation>
-    </Remediations>
-    <References>
-      <Reference Type="Self">
-        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-7Q4TNYUx</URL>
-        <Description>Cisco Identity Services Engine Vulnerabilities</Description>
-      </Reference>
-    </References>
-  </Vulnerability>
-  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
-    <Title>vuln-CVE-2022-20966</Title>
-    <ID SystemName="Cisco Bug ID">CSCwc98831</ID>
-    <Notes>
-      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwc98831</Note>
-      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
-    </Notes>
-    <CVE>CVE-2022-20966</CVE>
-    <ProductStatuses>
-      <Status Type="Known Affected">
-        <ProductID>CVRFPID-111903</ProductID>
-      </Status>
-    </ProductStatuses>
-    <CVSSScoreSets>
-      <ScoreSetV3>
-        <BaseScoreV3>5.4</BaseScoreV3>
-        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N</VectorV3>
-      </ScoreSetV3>
-    </CVSSScoreSets>
-    <Remediations>
-      <Remediation Type="Workaround">
-        <Description>There are no workarounds that address these vulnerabilities.</Description>
-      </Remediation>
-    </Remediations>
-    <References>
-      <Reference Type="Self">
-        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-7Q4TNYUx</URL>
-        <Description>Cisco Identity Services Engine Vulnerabilities</Description>
-      </Reference>
-    </References>
-  </Vulnerability>
-  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
-    <Title>vuln-CVE-2022-20967</Title>
-    <ID SystemName="Cisco Bug ID">CSCwc98833</ID>
-    <Notes>
-      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwc98833</Note>
-      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
-    </Notes>
-    <CVE>CVE-2022-20967</CVE>
-    <ProductStatuses>
-      <Status Type="Known Affected">
-        <ProductID>CVRFPID-111903</ProductID>
-      </Status>
-    </ProductStatuses>
-    <CVSSScoreSets>
-      <ScoreSetV3>
-        <BaseScoreV3>4.8</BaseScoreV3>
-        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N</VectorV3>
-      </ScoreSetV3>
-    </CVSSScoreSets>
-    <Remediations>
-      <Remediation Type="Workaround">
-        <Description>There are no workarounds that address these vulnerabilities.</Description>
-      </Remediation>
-    </Remediations>
-    <References>
-      <Reference Type="Self">
-        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-7Q4TNYUx</URL>
-        <Description>Cisco Identity Services Engine Vulnerabilities</Description>
+        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx</URL>
+        <Description>Cisco Identity Services Engine Insufficient Access Control Vulnerability</Description>
       </Reference>
     </References>
   </Vulnerability>

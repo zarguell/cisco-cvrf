@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-ise-access-contol-EeufSUCx</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Interim</cvrf:Status>
-    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:Version>1.3</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -34,9 +34,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-11-15T20:31:43</cvrf:Date>
         <cvrf:Description>Updated CSCwc62413 fix information.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2022-11-17T22:20:06</cvrf:Date>
+        <cvrf:Description>Updated source to include additional researchers. Added the defect CSCwb75965 to the header.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-11-02T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-15T20:31:43</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-17T22:20:06</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -86,7 +91,9 @@ The Cisco Product Security Incident Response Team (PSIRT) validates only the aff
     <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is aware that proof-of-concept exploit code for the vulnerability that is described in this advisory will become available after software fixes are released. Public reports of the vulnerability, including a description and classification without specific technical details, may become available after this advisory is published.
 
 The Cisco PSIRT is not aware of any malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
-    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank Davide Virruso of Yoroi for reporting this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank Davide Virruso of Yoroi for reporting the vulnerability associated with defect CSCwc62419.
+
+Cisco would like to thank Antonio López and Víctor Campos for reporting the vulnerability associated with defect CSCwb75965.</cvrf:Note>
     <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME. CISCO EXPECTS TO UPDATE THIS DOCUMENT AS NEW INFORMATION BECOMES AVAILABLE.
 
 A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
@@ -106,9 +113,9 @@ A standalone copy or paraphrase of the text of this document that omits the dist
   </ProductTree>
   <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
     <Title>Cisco Identity Services Engine Interface Feature Insufficient Access Control Vulnerability</Title>
-    <ID SystemName="Cisco Bug ID">CSCwc62419</ID>
+    <ID SystemName="Cisco Bug ID">CSCwb75965</ID>
     <Notes>
-      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwc62419</Note>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwb75965,CSCwc62419</Note>
       <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
     </Notes>
     <CVE>CVE-2022-20956</CVE>
