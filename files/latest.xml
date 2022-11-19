@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
-  <cvrf:DocumentTitle>Cisco Identity Services Engine Insufficient Access Control Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentTitle>Cisco Email Security Appliance, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Next Generation Management Vulnerabilities</cvrf:DocumentTitle>
   <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
   <cvrf:DocumentPublisher Type="Vendor">
     <cvrf:ContactDetails>Emergency Support:
@@ -14,53 +14,83 @@ More information can be found in Cisco Security Vulnerability Policy available a
   </cvrf:DocumentPublisher>
   <cvrf:DocumentTracking>
     <cvrf:Identification>
-      <cvrf:ID>cisco-sa-ise-access-contol-EeufSUCx</cvrf:ID>
+      <cvrf:ID>cisco-sa-esasmawsa-vulns-YRuSW5mD</cvrf:ID>
     </cvrf:Identification>
-    <cvrf:Status>Interim</cvrf:Status>
-    <cvrf:Version>1.3</cvrf:Version>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
-        <cvrf:Date>2022-11-02T15:47:25</cvrf:Date>
+        <cvrf:Date>2022-11-02T15:47:16</cvrf:Date>
         <cvrf:Description>Initial public release.</cvrf:Description>
       </cvrf:Revision>
       <cvrf:Revision>
         <cvrf:Number>1.1</cvrf:Number>
-        <cvrf:Date>2022-11-14T21:08:21</cvrf:Date>
-        <cvrf:Description>Updated the name of the researcher.</cvrf:Description>
+        <cvrf:Date>2022-11-07T16:15:01</cvrf:Date>
+        <cvrf:Description>Updated the 14.2 release train in the Secure Email and Web Manager fixed release table.</cvrf:Description>
       </cvrf:Revision>
       <cvrf:Revision>
         <cvrf:Number>1.2</cvrf:Number>
-        <cvrf:Date>2022-11-15T20:31:43</cvrf:Date>
-        <cvrf:Description>Updated CSCwc62413 fix information.</cvrf:Description>
-      </cvrf:Revision>
-      <cvrf:Revision>
-        <cvrf:Number>1.3</cvrf:Number>
-        <cvrf:Date>2022-11-17T22:20:06</cvrf:Date>
-        <cvrf:Description>Updated source to include additional researchers. Added the defect CSCwb75965 to the header.</cvrf:Description>
+        <cvrf:Date>2022-11-18T19:34:58</cvrf:Date>
+        <cvrf:Description>Added further clarification for the First Fixed Releases for each product.</cvrf:Description>
       </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-11-02T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-17T22:20:06</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-18T19:34:58</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
   </cvrf:DocumentTracking>
   <cvrf:DocumentNotes>
-    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to bypass authorization and access system files.
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Multiple vulnerabilities in the next-generation UI management interface for Cisco Email Security Appliance (ESA), Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance, formerly known as Cisco Web Security Appliance (WSA), could allow an attacker to elevate privileges or to conduct a SQL injection attack and obtain root privileges.
 
-This vulnerability is due to improper access control in the web-based management interface of an affected device. An attacker could exploit this vulnerability by sending a crafted HTTP request to the affected device. A successful exploit could allow the attacker to list, download, and delete certain files that they should not have access to.
+For more information about these vulnerabilities, see the Details ["#details"] section of this advisory.
 
-Cisco plans to release software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+Cisco has released software updates that address these vulnerabilities. There are no workarounds that address these vulnerabilities.
 
 This advisory is available at the following link:
-https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx"]</cvrf:Note>
-    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This vulnerability affects Cisco ISE.
+https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esasmawsa-vulns-YRuSW5mD ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esasmawsa-vulns-YRuSW5mD"]
+
+Attention: Simplifying the Cisco portfolio includes the renaming of security products under one brand: Cisco Secure. For more information, see Meet Cisco Secure ["https://www.cisco.com/c/en/us/products/security/secure-names.html"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">CVE-2022-20868 affects Cisco ESA and Cisco Secure Email and Web Manager.
+
+CVE-2022-20867 affects Cisco ESA, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance.
 
 For information about which Cisco software releases are vulnerable, see the Fixed Software ["#fs"] section of this advisory.</cvrf:Note>
-    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.</cvrf:Note>
-    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
-    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco will release free software updates ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#ssu"] that address the vulnerability described in this advisory. Customers with service contracts that entitle them to regular software updates should obtain security fixes through their usual update channels.
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The vulnerabilities are not dependent on one another. Exploitation of one of the vulnerabilities is not required to exploit the other vulnerability. In addition, a software release that is affected by one of the vulnerabilities may not be affected by the other vulnerability.
+
+Details about the vulnerabilities are as follows:
+
+CVE-2022-20867: Cisco ESA and Cisco Secure Email and Web Manager Next Generation Management SQL Injection Vulnerability
+
+A vulnerability in the next-generation UI management interface of Cisco ESA and Cisco Secure Email and Web Manager could allow an authenticated, remote attacker to conduct SQL injection attacks as root on an affected system. To exploit this vulnerability, an attacker would need to have the credentials of a high-privileged user account.
+
+This vulnerability is due to improper validation of user-submitted parameters. An attacker could exploit this vulnerability by authenticating to the application and sending malicious requests to an affected system. A successful exploit could allow the attacker to obtain data or modify data that is stored in the underlying database of the affected system.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+Bug ID(s): CSCwc12185 ["https://bst.cloudapps.cisco.com/bugsearch/bug/%20CSCwc12185"] and CSCwc12186 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12186"]
+CVE ID: CVE-2022-20867
+Security Impact Rating (SIR): High
+CVSS Base Score: 4.7
+CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L
+
+CVE-2022-20868: Cisco ESA, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Next Generation Management Privilege Escalation Vulnerability
+
+A vulnerability in the next-generation UI management interface of Cisco ESA, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance could allow an authenticated, remote attacker to elevate privileges on an affected system.
+
+This vulnerability is due to the use of a hard-coded value to encrypt a token that is used for certain API calls. An attacker could exploit this vulnerability by authenticating to an affected device and sending a crafted HTTP request. A successful exploit could allow the attacker to impersonate another valid user and execute commands with the privileges of that user account.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+Bug ID(s): CSCwc12181 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12181"], CSCwc12183 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12183"] and CSCwc12184 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12184"]
+CVE ID: CVE-2022-20868
+Security Impact Rating (SIR): Medium
+CVSS Base Score: 5.4
+CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">Cisco has released free software updates ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#ssu"] that address the vulnerabilities described in this advisory. Customers with service contracts that entitle them to regular software updates should obtain security fixes through their usual update channels.
 
 Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license:
 https://www.cisco.com/c/en/us/products/end-user-license-agreement.html ["https://www.cisco.com/c/en/us/products/end-user-license-agreement.html"]
@@ -77,68 +107,107 @@ Customers who purchase directly from Cisco but do not hold a Cisco service contr
 
 Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
       Fixed Releases
-In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by the vulnerability that is described in this advisory and the first release that includes the fix for this vulnerability. Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
-        Cisco ISE Release  First Fixed Release          3.0 and earlier  Not vulnerable      3.11  Release no. TBD (future release)      3.21  Release no. TBD (future release)
-1. Hot patches could be available by request for certain releases and patch levels. Contact Cisco TAC to make the request.
-Note: Cisco ISE releases 3.1P4 and 3.2 reduce the impact of this vulnerability by preventing files from being downloaded. The files can still be listed and deleted. This fix is tracked in CSCwb75965 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb75965"].
+In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by one of the vulnerabilities that is described in this advisory and the first release that includes the fix for that vulnerability. Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
 
-Note: Cisco ISE releases 3.1P4 and 3.2P1 further reduce the impact of this vulnerability by limiting the accessible files to the localdisk folder only. For more information about the localdisk folder, see the ISE 3.1 Release Notes ["https://www.cisco.com/c/en/us/td/docs/security/ise/3-1/release_notes/b_ise_31_RN.html#Cisco_Concept.dita_c1b2626d-e362-4597-8170-b93d812abe44"]. This fix is tracked in CSCwc62413 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc62413"].
-
-For instructions on upgrading a device, see the Upgrade Guides located on the Cisco Identity Service Engine ["https://www.cisco.com/c/en/us/support/security/identity-services-engine/series.html"] support page.
+ESA: CSCwc12181 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12181"] and CSCwc12185 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12185"]
+        Cisco AsyncOS Release  First Fixed Release          12.5.0 and earlier  Not vulnerable.      13.0  Migrate to a fixed release.      13.5  Migrate to a fixed release.      14.0  Migrate to a fixed release.      14.2  14.2.1-015      14.3   14.3.0-02011
+1. This release is for cloud-based products.
+Secure Email and Web Manager: CSCwc12183 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12183"] and CSCwc12186 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12186"]
+        Cisco AsyncOS Release  First Fixed Release          11.5.1 and earlier  Not vulnerable.      12.0  Migrate to a fixed release.      12.5  Migrate to a fixed release.      12.8  Migrate to a fixed release.      13.0  Migrate to a fixed release.      13.6  Migrate to a fixed release.      13.8  Migrate to a fixed release.      14.0  Migrate to a fixed release.      14.1  Migrate to a fixed release.      14.2  14.2.0-217      14.3  14.3.0-1151
+1. This release is for cloud-based products.
+Secure Web Appliance: CSCwc12184 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12184"]
+        Cisco AsyncOS Release  First Fixed Release          11.7 and earlier   Not vulnerable.      11.8  Migrate to a fixed release.      12.0  Migrate to a fixed release.      12.5  12.5.5-004      14.0  14.0.4 (Jan 2023)      14.5  14.5.1 (Nov 2022)
+Cisco Cloud Email Security (CES) includes Cisco ESA devices and Cisco Secure Email and Web Manager devices as part of the service solution. Cisco provides regular maintenance of the products included in this solution. Customers can also request a software upgrade by contacting Cisco CES support.
 
 The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
-    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
-    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is aware that proof-of-concept exploit code for the vulnerability that is described in this advisory will become available after software fixes are released. Public reports of the vulnerability, including a description and classification without specific technical details, may become available after this advisory is published.
-
-The Cisco PSIRT is not aware of any malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
-    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank Davide Virruso of Yoroi for reporting the vulnerability associated with defect CSCwc62419.
-
-Cisco would like to thank Antonio López and Víctor Campos for reporting the vulnerability associated with defect CSCwb75965.</cvrf:Note>
-    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME. CISCO EXPECTS TO UPDATE THIS DOCUMENT AS NEW INFORMATION BECOMES AVAILABLE.
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">Cisco would like to thank an independent security researcher working with SSD Secure Disclosure for reporting these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
 
 A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
   </cvrf:DocumentNotes>
   <cvrf:DocumentReferences>
     <cvrf:Reference Type="Self">
-      <cvrf:URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx</cvrf:URL>
-      <cvrf:Description>Cisco Identity Services Engine Insufficient Access Control Vulnerability</cvrf:Description>
+      <cvrf:URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esasmawsa-vulns-YRuSW5mD</cvrf:URL>
+      <cvrf:Description>Cisco Email Security Appliance, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Next Generation Management Vulnerabilities</cvrf:Description>
     </cvrf:Reference>
   </cvrf:DocumentReferences>
   <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
     <Branch Name="Cisco" Type="Vendor">
-      <Branch Name="Cisco Identity Services Engine Software" Type="Product Name">
-        <FullProductName ProductID="CVRFPID-111903">Cisco Identity Services Engine Software </FullProductName>
+      <Branch Name="Cisco Web Security Appliance (WSA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189789">Cisco Web Security Appliance (WSA) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Email Security Appliance (ESA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189790">Cisco Email Security Appliance (ESA) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Content Security Management Appliance (SMA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189791">Cisco Content Security Management Appliance (SMA) </FullProductName>
       </Branch>
     </Branch>
   </ProductTree>
   <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
-    <Title>Cisco Identity Services Engine Interface Feature Insufficient Access Control Vulnerability</Title>
-    <ID SystemName="Cisco Bug ID">CSCwb75965</ID>
+    <Title>vuln-CVE-2022-20867</Title>
+    <ID SystemName="Cisco Bug ID">CSCwc12185</ID>
     <Notes>
-      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwb75965,CSCwc62419</Note>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwc12185,CSCwc12186</Note>
       <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
     </Notes>
-    <CVE>CVE-2022-20956</CVE>
+    <CVE>CVE-2022-20867</CVE>
     <ProductStatuses>
       <Status Type="Known Affected">
-        <ProductID>CVRFPID-111903</ProductID>
+        <ProductID>CVRFPID-189790</ProductID>
+        <ProductID>CVRFPID-189791</ProductID>
       </Status>
     </ProductStatuses>
     <CVSSScoreSets>
       <ScoreSetV3>
-        <BaseScoreV3>7.1</BaseScoreV3>
-        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N</VectorV3>
+        <BaseScoreV3>5.4</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N</VectorV3>
       </ScoreSetV3>
     </CVSSScoreSets>
     <Remediations>
       <Remediation Type="Workaround">
-        <Description>There are no workarounds that address this vulnerability.</Description>
+        <Description>There are no workarounds that address these vulnerabilities.</Description>
       </Remediation>
     </Remediations>
     <References>
       <Reference Type="Self">
-        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx</URL>
-        <Description>Cisco Identity Services Engine Insufficient Access Control Vulnerability</Description>
+        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esasmawsa-vulns-YRuSW5mD</URL>
+        <Description>Cisco Email Security Appliance, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Next Generation Management Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>vuln-CVE-2022-20868</Title>
+    <ID SystemName="Cisco Bug ID">CSCwc12181</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwc12181,CSCwc12183,CSCwc12184</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2022-20868</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189790</ProductID>
+        <ProductID>CVRFPID-189791</ProductID>
+        <ProductID>CVRFPID-189789</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>4.7</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esasmawsa-vulns-YRuSW5mD</URL>
+        <Description>Cisco Email Security Appliance, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Next Generation Management Vulnerabilities</Description>
       </Reference>
     </References>
   </Vulnerability>

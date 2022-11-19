@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-esasmawsa-vulns-YRuSW5mD</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:Version>1.2</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -29,9 +29,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-11-07T16:15:01</cvrf:Date>
         <cvrf:Description>Updated the 14.2 release train in the Secure Email and Web Manager fixed release table.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2022-11-18T19:34:58</cvrf:Date>
+        <cvrf:Description>Added further clarification for the First Fixed Releases for each product.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-11-02T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-07T16:15:01</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-18T19:34:58</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -105,13 +110,13 @@ Customers should have the product serial number available and be prepared to pro
 In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by one of the vulnerabilities that is described in this advisory and the first release that includes the fix for that vulnerability. Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
 
 ESA: CSCwc12181 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12181"] and CSCwc12185 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12185"]
-        Cisco AsyncOS Release  First Fixed Release          12.5.0 and earlier  Not vulnerable.      13.0  Migrate to a fixed release.      13.5  Migrate to a fixed release.      14.0  Migrate to a fixed release.      14.2  14.2.1      14.3   14.3.01
+        Cisco AsyncOS Release  First Fixed Release          12.5.0 and earlier  Not vulnerable.      13.0  Migrate to a fixed release.      13.5  Migrate to a fixed release.      14.0  Migrate to a fixed release.      14.2  14.2.1-015      14.3   14.3.0-02011
 1. This release is for cloud-based products.
 Secure Email and Web Manager: CSCwc12183 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12183"] and CSCwc12186 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12186"]
-        Cisco AsyncOS Release  First Fixed Release          11.5.1 and earlier  Not vulnerable.      12.0  Migrate to a fixed release.      12.5  Migrate to a fixed release.      12.8  Migrate to a fixed release.      13.0  Migrate to a fixed release.      13.6  Migrate to a fixed release.      13.8  Migrate to a fixed release.      14.0  Migrate to a fixed release.      14.1  Migrate to a fixed release.      14.2  14.2.0      14.3  14.3.01
+        Cisco AsyncOS Release  First Fixed Release          11.5.1 and earlier  Not vulnerable.      12.0  Migrate to a fixed release.      12.5  Migrate to a fixed release.      12.8  Migrate to a fixed release.      13.0  Migrate to a fixed release.      13.6  Migrate to a fixed release.      13.8  Migrate to a fixed release.      14.0  Migrate to a fixed release.      14.1  Migrate to a fixed release.      14.2  14.2.0-217      14.3  14.3.0-1151
 1. This release is for cloud-based products.
 Secure Web Appliance: CSCwc12184 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc12184"]
-        Cisco AsyncOS Release  First Fixed Release          11.7 and earlier   Not vulnerable.      11.8  Migrate to a fixed release.      12.0  Migrate to a fixed release.      12.5  12.5.5      14.0  14.0.4 (Jan 2023)      14.5  14.5.1 (Nov 2022)
+        Cisco AsyncOS Release  First Fixed Release          11.7 and earlier   Not vulnerable.      11.8  Migrate to a fixed release.      12.0  Migrate to a fixed release.      12.5  12.5.5-004      14.0  14.0.4 (Jan 2023)      14.5  14.5.1 (Nov 2022)
 Cisco Cloud Email Security (CES) includes Cisco ESA devices and Cisco Secure Email and Web Manager devices as part of the service solution. Cisco provides regular maintenance of the products included in this solution. Customers can also request a software upgrade by contacting Cisco CES support.
 
 The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
