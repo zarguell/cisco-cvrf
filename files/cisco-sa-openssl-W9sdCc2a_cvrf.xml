@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-openssl-W9sdCc2a</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.5</cvrf:Version>
+    <cvrf:Version>1.6</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -49,9 +49,14 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-11-08T20:57:38</cvrf:Date>
         <cvrf:Description>Update summary, affected products, and disposition of cloud offers.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.6</cvrf:Number>
+        <cvrf:Date>2022-11-23T20:23:17</cvrf:Date>
+        <cvrf:Description>Updated vulnerable products and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2022-10-28T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-08T20:57:38</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-23T20:23:17</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
@@ -68,48 +73,48 @@ This advisory is available at the following link:
 https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a"]</cvrf:Note>
     <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco investigated its product line to determine which products and cloud services may be affected by these vulnerabilities. OpenSSL 3.x is not widely used in Cisco products and cloud offers, and only products that may contain the affected software are listed in this advisory. If a product or cloud offer is not explicitly listed in this advisory, it is not vulnerable.</cvrf:Note>
     <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">The following table lists Cisco products that are affected by one or more of the vulnerabilities that are described in this advisory. If a future release date is indicated for software, the date provided represents an estimate based on all information known to Cisco as of the Last Updated date at the top of the advisory. Availability dates are subject to change based on a number of factors, including satisfactory testing results and delivery of other priority features and fixes. If no version or date is listed for an affected component (indicated by a blank field and/or an advisory designation of Interim), Cisco is continuing to evaluate the fix and will update the advisory as additional information becomes available. After the advisory is marked Final, customers should refer to the associated Cisco bug(s) for further details.
-        Product  Cisco Bug ID  Fixed Release Availability ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"]      Network Management and Provisioning      IoT Field Network Director, formerly Connected Grid Network Management System  CSCwd44112 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44112"]  4.8.1 (Available)
+        Product  Cisco Bug ID  Fixed Release Availability ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"]      Endpoint Clients and Client Software      Operational Insights Collector  CSCwd44110 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44110"]  ScienceLogic Application Software 3.0.1 (Nov 2022)
+HPNA Application Software 2.0.1 (Nov 2022)
+APIC Application Software 3.0.1 (Nov 2022)
+SolarWinds Application Software 3.0.1 (Nov 2022)
+Syslog Collector 2.0.1 (Nov 2022)      Network Management and Provisioning      IoT Field Network Director, formerly Connected Grid Network Management System  CSCwd44112 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44112"]  4.8.1 (Available)
 4.9.0 (Available)
 5.0.0 (May 2023)</cvrf:Note>
     <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Only products that may contain the affected software are listed in this advisory. If a product or cloud offer is not explicitly listed in this advisory, it is not vulnerable.
 
 Cisco has confirmed that this vulnerability does not affect the following Cisco products:
 
-Cable Devices
-
-Ultra Cloud Core - Network Repository Function
-Ultra Cloud Core - User Plane Function
-
 Network and Content Security Devices
 
 Identity Services Engine (ISE)
-Secure Network Analytics
+Secure Network Analytics, formerly Stealthwatch
 
 Network Management and Provisioning
 
 Application Policy Infrastructure Controller (APIC)
-Container Platform
+Cisco Container Platform
 Data Center Network Manager (DCNM)
 Elastic Services Controller (ESC)
 Evolved Programmable Network Manager
-Nexus Dashboard, formerly known as Application Services Engine
+Nexus Dashboard, formerly Application Services Engine
 Prime Infrastructure
 
 Routing and Switching - Enterprise and Service Provider
 
-SD-WAN vAnalytics Software
-SD-WAN vManage Software
+SD-WAN vAnalytics
+SD-WAN vManage
+Ultra Cloud Core - Network Respository Function
 Ultra Cloud Core - Policy Control Function
 Ultra Cloud Core - Redundancy Configuration Manager
 Ultra Cloud Core - Subscriber Microservices Infrastructure
+Ultra Cloud Core - User Plane Function
 
 Unified Computing
 
 HyperFlex System
 UCS Blade Server - Integrated Management Controller
 UCS Manager
-
-   Cisco Cloud Offerings
+  Cisco Cloud Offerings
 
 Cisco investigated its cloud offers to determine which products may be affected by these vulnerabilities. The following table lists Cisco cloud offers that are under investigation. Only cloud offers known to possibly be affected are listed. If a cloud offer is not explicitly listed in this advisory, it is not vulnerable.
 
