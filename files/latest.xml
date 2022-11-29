@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
-  <cvrf:DocumentTitle>Vulnerabilities in OpenSSL Affecting Cisco Products: November 2022</cvrf:DocumentTitle>
+  <cvrf:DocumentTitle>Cisco Identity Services Engine Insufficient Access Control Vulnerability</cvrf:DocumentTitle>
   <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
   <cvrf:DocumentPublisher Type="Vendor">
     <cvrf:ContactDetails>Emergency Support:
@@ -14,157 +14,137 @@ More information can be found in Cisco Security Vulnerability Policy available a
   </cvrf:DocumentPublisher>
   <cvrf:DocumentTracking>
     <cvrf:Identification>
-      <cvrf:ID>cisco-sa-openssl-W9sdCc2a</cvrf:ID>
+      <cvrf:ID>cisco-sa-ise-access-contol-EeufSUCx</cvrf:ID>
     </cvrf:Identification>
-    <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.6</cvrf:Version>
+    <cvrf:Status>Interim</cvrf:Status>
+    <cvrf:Version>1.4</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
-        <cvrf:Date>2022-10-28T21:40:41</cvrf:Date>
+        <cvrf:Date>2022-11-02T15:47:25</cvrf:Date>
         <cvrf:Description>Initial public release.</cvrf:Description>
       </cvrf:Revision>
       <cvrf:Revision>
         <cvrf:Number>1.1</cvrf:Number>
-        <cvrf:Date>2022-11-01T20:23:02</cvrf:Date>
-        <cvrf:Description>Update with OpenSSL public announcement.</cvrf:Description>
+        <cvrf:Date>2022-11-14T21:08:21</cvrf:Date>
+        <cvrf:Description>Updated the name of the researcher.</cvrf:Description>
       </cvrf:Revision>
       <cvrf:Revision>
         <cvrf:Number>1.2</cvrf:Number>
-        <cvrf:Date>2022-11-02T19:26:36</cvrf:Date>
-        <cvrf:Description>Update products under investigation and products confirmed not vulnerable.</cvrf:Description>
+        <cvrf:Date>2022-11-15T20:31:43</cvrf:Date>
+        <cvrf:Description>Updated CSCwc62413 fix information.</cvrf:Description>
       </cvrf:Revision>
       <cvrf:Revision>
         <cvrf:Number>1.3</cvrf:Number>
-        <cvrf:Date>2022-11-03T20:12:42</cvrf:Date>
-        <cvrf:Description>Update products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+        <cvrf:Date>2022-11-17T22:20:06</cvrf:Date>
+        <cvrf:Description>Updated source to include additional researchers. Added the defect CSCwb75965 to the header.</cvrf:Description>
       </cvrf:Revision>
       <cvrf:Revision>
         <cvrf:Number>1.4</cvrf:Number>
-        <cvrf:Date>2022-11-04T18:40:16</cvrf:Date>
-        <cvrf:Description>Update affected products and disposition of cloud offers.</cvrf:Description>
-      </cvrf:Revision>
-      <cvrf:Revision>
-        <cvrf:Number>1.5</cvrf:Number>
-        <cvrf:Date>2022-11-08T20:57:38</cvrf:Date>
-        <cvrf:Description>Update summary, affected products, and disposition of cloud offers.</cvrf:Description>
-      </cvrf:Revision>
-      <cvrf:Revision>
-        <cvrf:Number>1.6</cvrf:Number>
-        <cvrf:Date>2022-11-23T20:23:17</cvrf:Date>
-        <cvrf:Description>Updated vulnerable products and products confirmed not vulnerable.</cvrf:Description>
+        <cvrf:Date>2022-11-28T16:06:37</cvrf:Date>
+        <cvrf:Description>Updated information about fixed releases.</cvrf:Description>
       </cvrf:Revision>
     </cvrf:RevisionHistory>
-    <cvrf:InitialReleaseDate>2022-10-28T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-11-23T20:23:17</cvrf:CurrentReleaseDate>
+    <cvrf:InitialReleaseDate>2022-11-02T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-11-28T16:06:37</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
     </cvrf:Generator>
   </cvrf:DocumentTracking>
   <cvrf:DocumentNotes>
-    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">On November 1, 2022, the OpenSSL Project announced the following vulnerabilities:
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to bypass authorization and access system files.
 
-CVE-2022-3602 - X.509 Email Address 4-byte Buffer Overflow
-CVE-2022-3786 - X.509 Email Address Variable Length Buffer Overflow
+This vulnerability is due to improper access control in the web-based management interface of an affected device. An attacker could exploit this vulnerability by sending a crafted HTTP request to the affected device. A successful exploit could allow the attacker to list, download, and delete certain files that they should not have access to.
 
-For a description of these vulnerabilities, see OpenSSL Security Advisory [Nov 1 2022] ["https://www.openssl.org/news/secadv/20221101.txt"].
+Cisco plans to release software updates that address this vulnerability. There are no workarounds that address this vulnerability.
 
 This advisory is available at the following link:
-https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a"]</cvrf:Note>
-    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco investigated its product line to determine which products and cloud services may be affected by these vulnerabilities. OpenSSL 3.x is not widely used in Cisco products and cloud offers, and only products that may contain the affected software are listed in this advisory. If a product or cloud offer is not explicitly listed in this advisory, it is not vulnerable.</cvrf:Note>
-    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">The following table lists Cisco products that are affected by one or more of the vulnerabilities that are described in this advisory. If a future release date is indicated for software, the date provided represents an estimate based on all information known to Cisco as of the Last Updated date at the top of the advisory. Availability dates are subject to change based on a number of factors, including satisfactory testing results and delivery of other priority features and fixes. If no version or date is listed for an affected component (indicated by a blank field and/or an advisory designation of Interim), Cisco is continuing to evaluate the fix and will update the advisory as additional information becomes available. After the advisory is marked Final, customers should refer to the associated Cisco bug(s) for further details.
-        Product  Cisco Bug ID  Fixed Release Availability ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"]      Endpoint Clients and Client Software      Operational Insights Collector  CSCwd44110 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44110"]  ScienceLogic Application Software 3.0.1 (Nov 2022)
-HPNA Application Software 2.0.1 (Nov 2022)
-APIC Application Software 3.0.1 (Nov 2022)
-SolarWinds Application Software 3.0.1 (Nov 2022)
-Syslog Collector 2.0.1 (Nov 2022)      Network Management and Provisioning      IoT Field Network Director, formerly Connected Grid Network Management System  CSCwd44112 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd44112"]  4.8.1 (Available)
-4.9.0 (Available)
-5.0.0 (May 2023)</cvrf:Note>
-    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Only products that may contain the affected software are listed in this advisory. If a product or cloud offer is not explicitly listed in this advisory, it is not vulnerable.
+https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx ["https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This vulnerability affects Cisco ISE.
 
-Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+For information about which Cisco software releases are vulnerable, see the Fixed Software ["#fs"] section of this advisory.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco will release free software updates ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#ssu"] that address the vulnerability described in this advisory. Customers with service contracts that entitle them to regular software updates should obtain security fixes through their usual update channels.
 
-Network and Content Security Devices
+Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license:
+https://www.cisco.com/c/en/us/products/end-user-license-agreement.html ["https://www.cisco.com/c/en/us/products/end-user-license-agreement.html"]
 
-Identity Services Engine (ISE)
-Secure Network Analytics, formerly Stealthwatch
+Additionally, customers may only download software for which they have a valid license, procured from Cisco directly, or through a Cisco authorized reseller or partner. In most cases this will be a maintenance upgrade to software that was previously purchased. Free security software updates do not entitle customers to a new software license, additional software feature sets, or major revision upgrades.
 
-Network Management and Provisioning
+The Cisco Support and Downloads page ["https://www.cisco.com/c/en/us/support/index.html"] on Cisco.com provides information about licensing and downloads. This page can also display customer device support coverage for customers who use the My Devices tool.
 
-Application Policy Infrastructure Controller (APIC)
-Cisco Container Platform
-Data Center Network Manager (DCNM)
-Elastic Services Controller (ESC)
-Evolved Programmable Network Manager
-Nexus Dashboard, formerly Application Services Engine
-Prime Infrastructure
+When considering software upgrades ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
 
-Routing and Switching - Enterprise and Service Provider
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+  Customers Without Service Contracts
+Customers who purchase directly from Cisco but do not hold a Cisco service contract and customers who make purchases through third-party vendors but are unsuccessful in obtaining fixed software through their point of sale should obtain upgrades by contacting the Cisco TAC: https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html ["https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"]
 
-SD-WAN vAnalytics
-SD-WAN vManage
-Ultra Cloud Core - Network Respository Function
-Ultra Cloud Core - Policy Control Function
-Ultra Cloud Core - Redundancy Configuration Manager
-Ultra Cloud Core - Subscriber Microservices Infrastructure
-Ultra Cloud Core - User Plane Function
+Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
+      Fixed Releases
+In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by the vulnerability that is described in this advisory and the first release that includes the fix for this vulnerability. Customers are advised to upgrade to an appropriate fixed software release ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
+        Cisco ISE Release  First Fixed Release          2.7 and earlier  Not vulnerable      3.0  Not vulnerable      3.11  3.1P6 (March 2023)      3.22  3.2P1 (January 2023)
+1. Hot patches may be available by request for Release 3.1P4. Once 3.1P5 is released, hot patches can only be requested for 3.1P5 instead of 3.1P4. Contact Cisco TAC to make the request.
+2. Hot patches may be available by request for Release 3.2. Contact Cisco TAC to make the request.
+Note: Cisco ISE releases 3.1P4 and 3.2 reduce the impact of this vulnerability by preventing files from being downloaded. The files can still be listed and deleted. This fix is tracked in CSCwb75965 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb75965"].
 
-Unified Computing
+Note: Cisco ISE releases 3.1P4 and 3.2P1 further reduce the impact of this vulnerability by limiting the accessible files to the localdisk folder only. For more information about the localdisk folder, see the ISE 3.1 Release Notes ["https://www.cisco.com/c/en/us/td/docs/security/ise/3-1/release_notes/b_ise_31_RN.html#Cisco_Concept.dita_c1b2626d-e362-4597-8170-b93d812abe44"]. This fix is tracked in CSCwc62413 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwc62413"].
 
-HyperFlex System
-UCS Blade Server - Integrated Management Controller
-UCS Manager
-  Cisco Cloud Offerings
+For instructions on upgrading a device, see the Upgrade Guides located on the Cisco Identity Service Engine ["https://www.cisco.com/c/en/us/support/security/identity-services-engine/series.html"] support page.
 
-Cisco investigated its cloud offers to determine which products may be affected by these vulnerabilities. The following table lists Cisco cloud offers that are under investigation. Only cloud offers known to possibly be affected are listed. If a cloud offer is not explicitly listed in this advisory, it is not vulnerable.
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is aware that proof-of-concept exploit code for the vulnerability that is described in this advisory will become available after software fixes are released. Public reports of the vulnerability, including a description and classification without specific technical details, may become available after this advisory is published.
 
-        Product  Disposition      AppDynamics  Not affected      CX Cloud  Not affected      Duo  Not affected      Intersight  Not affected      Meraki  Not affected      SD-WAN  Not affected      SecureX  Not affected      ThousandEyes  Not affected      Umbrella  Not affected      Unified Communications Manager Cloud  Not affected      Webex Calling  Not affected      Webex Cloud-Connected UC  Not affected      Webex Contact Center  Not affected      Webex Teams  Not affected</cvrf:Note>
-    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">Any workarounds for a specific Cisco product or service will be documented in the relevant Cisco bugs, which are identified in the Vulnerable Products ["#vp"] section of this advisory.</cvrf:Note>
-    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">For information about fixed software releases ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], consult the Cisco bugs identified in the Vulnerable Products ["#vp"] section of this advisory.
+The Cisco PSIRT is not aware of any malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank Davide Virruso of Yoroi for reporting the vulnerability associated with defect CSCwc62419.
 
-When considering software upgrades ["https://tools.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories ["https://www.cisco.com/go/psirt"] page, to determine exposure and a complete upgrade solution.
-
-In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.</cvrf:Note>
-    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
-    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any malicious use of the vulnerabilities that are described in this advisory.</cvrf:Note>
-    <cvrf:Note Title="Source" Type="General" Ordinal="9">These vulnerabilities were publicly disclosed by the OpenSSL Software Foundation on November 1, 2022.</cvrf:Note>
-    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+Cisco would like to thank Antonio López and Víctor Campos for reporting the vulnerability associated with defect CSCwb75965.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME. CISCO EXPECTS TO UPDATE THIS DOCUMENT AS NEW INFORMATION BECOMES AVAILABLE.
 
 A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
   </cvrf:DocumentNotes>
   <cvrf:DocumentReferences>
     <cvrf:Reference Type="Self">
-      <cvrf:URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a</cvrf:URL>
-      <cvrf:Description>Vulnerabilities in OpenSSL Affecting Cisco Products: November 2022</cvrf:Description>
+      <cvrf:URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx</cvrf:URL>
+      <cvrf:Description>Cisco Identity Services Engine Insufficient Access Control Vulnerability</cvrf:Description>
     </cvrf:Reference>
   </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Identity Services Engine Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-111903">Cisco Identity Services Engine Software </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
   <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
-    <Title>X.509 Email Address 4-byte Buffer Overflow, Other Vulnerability</Title>
-    <CVE>CVE-2022-3602</CVE>
+    <Title>Cisco Identity Services Engine Interface Feature Insufficient Access Control Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwb75965</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwb75965,CSCwc62419</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2022-20956</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-111903</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>7.1</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
     <Remediations>
       <Remediation Type="Workaround">
-        <Description>Any workarounds for a specific Cisco product or service will be documented in the relevant Cisco bugs, which are identified in the Vulnerable Products ["#vp"] section of this advisory.</Description>
+        <Description>There are no workarounds that address this vulnerability.</Description>
       </Remediation>
     </Remediations>
     <References>
       <Reference Type="Self">
-        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a</URL>
-        <Description>Vulnerabilities in OpenSSL Affecting Cisco Products: November 2022</Description>
-      </Reference>
-    </References>
-  </Vulnerability>
-  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
-    <Title>X.509 Email Address Variable Length Buffer Overflow, Other Vulnerability</Title>
-    <CVE>CVE-2022-3786</CVE>
-    <Remediations>
-      <Remediation Type="Workaround">
-        <Description>Any workarounds for a specific Cisco product or service will be documented in the relevant Cisco bugs, which are identified in the Vulnerable Products ["#vp"] section of this advisory.</Description>
-      </Remediation>
-    </Remediations>
-    <References>
-      <Reference Type="Self">
-        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a</URL>
-        <Description>Vulnerabilities in OpenSSL Affecting Cisco Products: November 2022</Description>
+        <URL>https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-access-contol-EeufSUCx</URL>
+        <Description>Cisco Identity Services Engine Insufficient Access Control Vulnerability</Description>
       </Reference>
     </References>
   </Vulnerability>
